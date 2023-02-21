@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/template.css">
+    <link rel="stylesheet" href="CSS/menu-auswendig.css">
+    <title>IP-Adresse</title>
+  </head>
+
+  <body>
+
+    <div class="bod">
+
+      <h3>IP-Adress Klassen</h3>
+
+      <table>
+        <caption>Public address (Öffentliche Klasse)</caption>
+        <tr>
+          <th>Klassen</th>
+          <th>Präfix</th>
+          <th>Adressbereich</th>
+          <th>Subnetzmaske</th>
+          <th>Netzlänge (mit Präfix)</th>
+          <th>Hostlänge</th>
+          <th>Netze</th>
+        </tr>
+        <tr>
+          <td>Klasse A</td>
+          <td>0...</td>
+          <td>0.0.0.0 - 127.255.255.255</td>
+          <td>255.0.0.0</td>
+          <td>8 Bit</td>
+          <td>24 Bit</td>
+          <td>128</td>
+        </tr>
+        <tr>
+          <td>Klasse B</td>
+          <td>10...</td>
+          <td>128.0.0.0 - 191.255.255.255</td>
+          <td>255.255.0.0</td>
+          <td>16 Bit</td>
+          <td>16 Bit</td>
+          <td>16.384</td>
+        </tr>
+        <tr>
+          <td>Klasse C</td>
+          <td>110...</td>
+          <td>192.0.0.0 - 223.255.255.255</td>
+          <td>255.255.255.0</td>
+          <td>24 Bit</td>
+          <td>8 Bit</td>
+          <td>2.097.152</td>
+        </tr>
+        <tr>
+          <td>Klasse D</td>
+          <td>1110...</td>
+          <td>224.0.0.0 - 239.255.255.255</td>
+          <td colspan="4">Verwendung für Multicas-Anwendungen</td>
+        </tr>
+        <tr>
+          <td>Klasse E</td>
+          <td>1111...</td>
+          <td>240.0.0.0 - 255.255.255.255</td>
+          <td colspan="4">reserviert (für zukünftige Zwecke)</td>
+        </tr>
+      </table>
+
+      <table>
+        <caption>Local address (Private Adressen)</caption>
+        <tr>
+          <th>Klasse</th>
+          <th>Adressbereich</th>
+          <th>Subnetzmaske</th>
+          <th>Verkürzung</th>
+          <th>Netze</th>
+        </tr>
+        <tr>
+          <td>Klasse A</td>
+          <td>10.0.0.0 - 10.255.255.255</td>
+          <td>255.0.0.0 /8</td>
+          <td>10 /8</td>
+          <td>16.777.216</td>
+        </tr>
+        <tr>
+          <td>Klasse B</td>
+          <td>172.16.0.0 - 172.31.255.255</td>
+          <td>255.128.0.0 /12</td>
+          <td>172.16 /12</td>
+          <td>1.048.576</td>
+        </tr>
+        <tr>
+          <td>Klasse C</td>
+          <td>192.168.0.0 - 192.168.255.255</td>
+          <td>255.255.0.0 /16</td>
+          <td>192.168 /16</td>
+          <td>65.536</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="foot">
+      <p><a class="a" class="button" href="index.html">Home</a><a class="footer-bottom" class="button" href="auswendig.html">Auswendig</a></p>
+      <footer class="foot"> - Made by Nicole Cristina Bittner - nicolecbittner@gmail.com - </footer>
+    </div>
+
+  </body>
+</html>
