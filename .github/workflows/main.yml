@@ -1,0 +1,19 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: SSH Server Deploy
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      with:
+        username: root
+        server: foo.bar
+        ssh_private_key: ${{ secrets.DEPLOYMENT_PRIVATE_KEY }}
+        remote_path: /var/www/test
