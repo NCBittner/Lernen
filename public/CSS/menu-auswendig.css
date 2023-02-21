@@ -115,3 +115,19 @@ a {
   width: auto;
   height: 220px;
 }
+
+.p-bb {
+  text-align: center;
+}
+
+.byte {
+  width: 50%;
+  height: auto;
+  float: left;
+}
+
+.bit{
+  width: 50%;
+  height: auto;
+
+}
