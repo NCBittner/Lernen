@@ -1,0 +1,111 @@
+body {
+  background-color: #1a6aff;
+  margin-top: auto;
+  margin: 0px;
+}
+
+div {
+  background-color: white;
+  padding: 8px 8px;
+  margin: 8px 8px;
+  text-decoration-color: black;
+  text-decoration-line: none;
+}
+
+.bod {
+  height: auto;
+  width: auto;
+  text-align: -webkit-center;
+}
+
+.first-heading {
+  margin-right: 0px;
+}
+
+h1 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: calc(4.2rem/2.5) 0 calc(4.2rem/2.5) 0;
+  margin-top: 0;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  margin: 8px 8px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  align-content: left;
+  padding: 4px 8px;
+}
+
+.SMART {
+  text-align: left;
+}
+
+.SMART0 {
+  width: 80px;
+  height: 36px;
+}
+
+.SMART1 {
+  width: 36px;
+  height: 36px;
+}
+
+.SMART2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+caption {
+  border: 1px solid black;
+}
+
+.header-fach {
+    text-align: center;
+}
+
+.header-thema {
+    text-align: center;
+}
+
+.header-under-thema {
+    text-align: center;
+}
+
+.a {
+  line-height: 1.25;
+  background: #ff8000;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 4px 8px;
+  margin-right: 4px;
+}
+
+.foot {
+  padding: 4px 8px;
+  color: black;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  height: 3em;
+}
+
+p, ul, li {
+  font-size: 1em;
+  margin-left: 8px;
+}
