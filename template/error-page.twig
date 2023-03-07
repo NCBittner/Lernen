@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block title %}Serverfehler{% endblock %}
+
+{% block main %}
+    <main>
+        <h1>Fehler</h1>
+        <p>Es ist ein unerwarteter Fehler aufgetreten:</p>
+        <p>[{{ exception.code }}] {{ exception.message }}</p>
+    </main>
+{% endblock %}
