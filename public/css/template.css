@@ -1,7 +1,10 @@
 body {
-  background-color: #1a6aff;
-  margin-top: auto;
-  margin: 0px;
+  height: 100%;
+  background: #FAFAFA;
+  color: #424242;
+  font-family: 'Roboto', Arial, Verdana, Helvetica;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 div {
