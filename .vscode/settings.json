@@ -1,0 +1,6 @@
+{
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    "editor.codeActions.triggerOnFocusChange": false,
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.acceptSuggestionOnEnter": "smart"
+}
