@@ -14,10 +14,12 @@
     }
   ],
   "require": {
-    "php": "^8.1",
-    "slim/psr7": "^1.6",
-    "slim/slim": "^4.11.0",
-    "twig/twig": "^v3.5.1"
+    "php": "^8.3",
+    "blackbonjour/service-manager": "1.5.*",
+    "monolog/monolog": "3.8.*",
+    "slim/psr7": "1.7.*",
+    "slim/slim": "4.14.*",
+    "twig/twig": "v3.16.*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
