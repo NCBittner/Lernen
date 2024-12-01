@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Handler;
+namespace ncbittner\lernen\Handler\Blog;
 
-use ncbittner\lernen\Controller;
+use ncbittner\lernen\Component\Blog\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

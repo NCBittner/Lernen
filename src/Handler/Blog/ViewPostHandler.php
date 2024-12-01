@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Handler;
+namespace ncbittner\lernen\Handler\Blog;
 
-use ncbittner\lernen\Controller;
+use ncbittner\lernen\Component\Blog\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final readonly class ViewTemplateHandler
+final readonly class ViewPostHandler
 {
     public function __construct(
         private Controller $controller,
@@ -16,7 +16,7 @@ final readonly class ViewTemplateHandler
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
-        $response->getBody()->write($this->controller->viewTemplate($args['name'] ?? ''));
+        $response->getBody()->write($this->controller->viewPost($args['name'] ?? ''));
 
         return $response;
     }

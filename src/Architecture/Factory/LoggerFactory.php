@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Factory;
+namespace ncbittner\lernen\Architecture\Factory;
 
 use BlackBonjour\ServiceManager\FactoryInterface;
 use Monolog\Handler\StreamHandler;

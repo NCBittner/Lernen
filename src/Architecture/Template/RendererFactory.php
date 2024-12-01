@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Template;
+namespace ncbittner\lernen\Architecture\Template;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;

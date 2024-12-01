@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use BlackBonjour\ServiceManager\AbstractFactory\DynamicFactory;
 use BlackBonjour\ServiceManager\AbstractFactory\ReflectionFactory;
-use ncbittner\lernen\Factory\ApplicationFactory;
-use ncbittner\lernen\Factory\LoggerFactory;
+use ncbittner\lernen\Architecture\Factory\ApplicationFactory;
+use ncbittner\lernen\Architecture\Factory\LoggerFactory;
 use Psr\Log\LoggerInterface;
 use Slim\App;
 

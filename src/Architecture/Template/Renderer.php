@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Template;
+namespace ncbittner\lernen\Architecture\Template;
 
+use Psr\Log\LoggerInterface;
 use Throwable;
 use Twig\Environment;
 
@@ -23,6 +24,7 @@ readonly class Renderer
      */
     public function __construct(
         private Environment $environment,
+        private LoggerInterface $logger,
     ) {}
 
     public function render(string $name): string
@@ -44,6 +46,16 @@ readonly class Renderer
             $statusCode = 200;
         } catch (Throwable $t) {
             $statusCode = 500;
+
+            $this->logger->error(
+                sprintf('Failed to render template %s: %s', $name, $t->getMessage()),
+                [
+                    'exception'        => $t::class,
+                    'exceptionCode'    => $t->getCode(),
+                    'exceptionMessage' => $t->getMessage(),
+                    'name'             => $name,
+                ],
+            );
 
             try {
                 $template = $this->environment->render(self::TEMPLATE_ERROR_PAGE);
