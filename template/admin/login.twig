@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+
+{% block title %}Unbekannte Ressource{% endblock %}
+
+{% block main %}
+    <main>
+      <div id="loginPopUp">
+          <h1>Login</h1>
+
+          <label>Passwort</label>
+          <input type="text" name="Enter Passwort" value="psw" required>
+
+          <p id="hint">Passwort consists of xy.</p> {# Passwort Hinte ändern nach der Wahl des Passworts #}
+
+          <bottom id="passwort"><a>Finish!</a></bottom>
+      </div>
+    </main>
+{% endblock %}
