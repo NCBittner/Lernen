@@ -3,22 +3,196 @@
 {% block title %}Dateiformate{% endblock %}
 
 {% block main %}
-    <div>
+    <main>
 
       <h1>Dateiformate</h1>
+
+      <p>Datentiefe x 3 = Farbtiefe => bei RGB</p>
+      <p>Datentiefe x 4 = Farbtiefe => bei CMYK</p>
 
       <h2>Grafikformate - Print</h2>
       <table>
 
+        <tr>
+          <th>Name</th>
+          <th>Name langform</th>
+          <th>Datentiefe</th>
+          <th>Farbtiefe</th>
+          <th>Farbpalette</th>
+          <th>Bitmap</th>
+          <th>Vektor</th>
+          <th>Kompression</th>
+          <th>Verwendung</th>
+        </tr>
+
+        <tr>
+          <th>TIF(TIFF)</th>
+          <td>Tagged Image File Format</td>
+          <td>Flexibel</td>
+          <td>48 bit</td>
+          <td>CMYK & RGB</td>
+          <td>ja</td>
+          <td>nein</td>
+          <td>verlustfrei und verlustreich</td>
+          <td>gut
+             für Scans</td>
+        </tr>
+
+        <tr>
+          <th>EPS</th>
+          <td>Encapsulated Postscript</td>
+          <td>8 Bit</td>
+          <td>je nach Farben</td>
+          <td>CMYK & RGB</td>
+          <td>ja</td>
+          <td>ja</td>
+          <td>verlustreich</td>
+          <td>Plakatwände und Poster</td>
+        </tr>
+
+        <tr>
+          <td>BMP</td>
+          <td>Bitmap</td>
+          <td>24-72 Bit</td>
+          <td>8-24 Bit</td>
+          <td>RGB</td>
+          <td>ja</td>
+          <td>nein</td>
+          <td>Vorwiegend Unkomprimiert</td>
+          <td>Geräteunabhängiges Format und kann deshalb ohne  Qualitätsverlust auf unterschiedlichsten Geräten angezeigt und  gespeichert werden.</td>
+        </tr>
+
+        <tr>
+          <td>Ai</td>
+          <td>Adobe Illustrator</td>
+          <td></td>
+          <td></td>
+          <td>CMYK & RGB</td>
+          <td>nein</td>
+          <td>ja</td>
+          <td>verlustfrei</td>
+          <td>proprietäres Adobe-Format für Vektorgrafiken</td>
+        </tr>
+
+        <tr>
+          <td>PSD</td>
+          <td>Photoshop Document</td>
+          <td>8 Bit</td>
+          <td>24 oder 32 Bit</td>
+          <td>CMYK & RGB</td>
+          <td>ja</td>
+          <td>nein</td>
+          <td>verlustfrei</td>
+          <td>Speicherung mehrerer Ebenen, Bilder und Objekte in hoher Auflösung</td>
+        </tr>
+
       </table>
+
 
       <h2>Grafikformate - non Print</h2>
       <table>
 
+        <tr>
+          <th>Name</th>
+          <th>Name langform</th>
+          <th>Datentiefe</th>
+          <th>Farbtiefe</th>
+          <th>Farbpalette</th>
+          <th>Bitmap</th>
+          <th>Vektor</th>
+          <th>Kompression</th>
+          <th>Verwendung</th>
+        </tr>
+
+        <tr>
+          <th>GIF</th>
+          <td>Graphics Interchange Format</td>
+          <td></td>
+          <td>8 Bit</td>
+          <td>RGB</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>verlustfrei</td>
+          <td>Darstellung einfacher Bilder und Animationen</td>
+        </tr>
+
+        <tr>
+          <th>PNG</th>
+          <td>Portable Network Graphic</td>
+          <td>1 bis 8 Bit</td>
+          <td>die Zahl hinter PNG ist die Farbtiefe</td>
+          <td>RGB</td>
+          <td>ja</td>
+          <td>nein</td>
+          <td>verlustfrei</td>
+          <td>vor allem im Webdesign verbreitet</td>
+        </tr>
+
+        <tr>
+          <th>WebP</th>
+          <td>Web Picture Format</td>
+          <td>8 Bit</td>
+          <td>24 Bit</td>
+          <td>RGB</td>
+          <td>ja</td>
+          <td>nein</td>
+          <td>verlustfrei und verlustbehaftet</td>
+          <td>schnellere Ladezeiten auf Websiten möglich</td>
+        </tr>
+
+        <tr>
+          <th>SVG</th>
+          <td>Scalable Vector Graphics</td>
+          <td></td>
+          <td>24 Bit</td>
+          <td>RGB</td>
+          <td>nein</td>
+          <td>ja</td>
+          <td>verlustfrei</td>
+          <td>hauptsächlich im Webdesign verbreitet und unterstützt Animationen</td>
+        </tr>
+
+        <tr>
+          <th>HEIC</th>
+          <td>High Efficiency Image Coding</td>
+          <td>16Bit/Kanal => 2^16=65.536 Bit</td>
+          <td>16 Bit</td>
+          <td>RGB</td>
+          <td>nein</td>
+          <td>ja</td>
+          <td>verlustbehaftet</td>
+          <td>hauptsächlich im Webdesign verbreitet und unterstützt Animationen</td>
+        </tr>
+
       </table>
+
 
       <h2>Grafikformate - Print & non Print</h2>
       <table>
+
+        <tr>
+          <th>Name</th>
+          <th>Name langform</th>
+          <th>Datentiefe</th>
+          <th>Farbtiefe</th>
+          <th>Farbpalette</th>
+          <th>Bitmap</th>
+          <th>Vektor</th>
+          <th>Kompression</th>
+          <th>Verwendung</th>
+        </tr>
+
+        <tr>
+          <th>JPEG</th>
+          <td>Joint Photographic Experts Group</td>
+          <td>8 Bit/Kanal => 256</td>
+          <td></td>
+          <td>+</td>
+          <td>nein</td>
+          <td>ja</td>
+          <td>verlustbehaftet</td>
+          <td>hauptsächlich im Webdesign verbreitet und unterstützt Animationen</td>
+        </tr>
 
       </table>
 
@@ -37,5 +211,5 @@
 
       </table>
 
-    </div>
+    </main>
 {% endblock %}
