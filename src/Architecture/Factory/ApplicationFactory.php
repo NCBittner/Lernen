@@ -31,7 +31,7 @@ final class ApplicationFactory
 
         // Add error middleware as last step - to be executed first!
         $app->addErrorMiddleware(
-            displayErrorDetails: true,
+            displayErrorDetails: false,
             logErrors          : true,
             logErrorDetails    : true,
             logger             : $container->get(LoggerInterface::class),
