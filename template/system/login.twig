@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% block title %}Login{% endblock %}
+
+{% block main %}
+    <main>
+      <form action="/admin/login" method="post">
+          <label for="password"></label>
+          <input type="password" id="password" name="password" placeholder="Dein Passwort" />
+      </form>
+    </main>
+{% endblock %}

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Architecture\Factory;
+namespace NCBittner\Lernen\Architecture\Factory;
 
 use BlackBonjour\ServiceManager\ServiceManager;
 

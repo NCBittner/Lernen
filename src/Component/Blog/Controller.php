@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Component\Blog;
+namespace NCBittner\Lernen\Component\Blog;
 
-use ncbittner\lernen\Architecture\Template\Renderer;
+use NCBittner\Lernen\Architecture\Template\Renderer;
 
 readonly class Controller
 {
@@ -19,6 +19,6 @@ readonly class Controller
 
     public function viewPost(string $templateName): string
     {
-        return $this->renderer->render($templateName);
+        return $this->renderer->render(sprintf('blog/%', $templateName));
     }
 }

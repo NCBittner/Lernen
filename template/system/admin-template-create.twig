@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block title %}Neues Template erstellen - Admin{% endblock %}
+
+{% block main %}
+    <main>
+        <h1>Neues Template erstellen</h1>
+        <form action="/admin/create" method="post">
+            <fieldset>
+                <label for="template">Template-Name:</label>
+                <input type="text" id="template" name="template" placeholder="/Unterordner/Seite" required />
+            </fieldset>
+            <fieldset>
+                <label for="content">Inhalt:</label>
+                <textarea id="content" name="content">{{ placeholder }}</textarea>
+            </fieldset>
+            <fieldset>
+                <button type="submit">Template erstellen</button>
+            </fieldset>
+        </form>
+    </main>
+{% endblock %}

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace NCBittner\Lernen\Handler\Blog;
+namespace NCBittner\Lernen\Handler\Admin;
 
-use NCBittner\Lernen\Component\Blog\Controller;
+use NCBittner\Lernen\Component\Admin\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
 
-final readonly class ViewPostHandler
+final readonly class EditFormHandler
 {
     public function __construct(
         private Controller $controller,
@@ -23,7 +23,7 @@ final readonly class ViewPostHandler
         ResponseInterface $response,
         array $args,
     ): ResponseInterface {
-        $response->getBody()->write($this->controller->viewPost($args['name'] ?? ''));
+        $response->getBody()->write($this->controller->editForm($args['template'] ?? ''));
 
         return $response;
     }

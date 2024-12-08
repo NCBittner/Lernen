@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <title>{% block title %}Homepage{% endblock %}</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/template.css">
-  </head>
-  <body>
-
-    {% block main %}{% endblock %}
-
-    <div class="foot">
-      <p><a class="a" class="button" href="/">Home</a><a class="a" class="button" id="button" href="/auswendig">Auswendig</a></p>
-      <footer class="foot"> - Made by Nicole Cristina Bittner - nicolecbittner@gmail.com - </footer>
-    </div>
-
-  </body>
+<html lang="de-DE">
+    <head>
+        <title>{% block title %}Homepage{% endblock %}</title>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/template.css">
+    </head>
+    <body>
+        {% block main %}{% endblock %}
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="a button" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="a button" href="/auswendig">Auswendig</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>- Made by Nicole Cristina Bittner - nicolecbittner@gmail.com -</p>
+        </footer>
+    </body>
 </html>

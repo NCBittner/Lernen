@@ -33,7 +33,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ncbittner\\lernen\\": "src"
+      "NCBittner\\Lernen\\": "src"
     }
   }
 }

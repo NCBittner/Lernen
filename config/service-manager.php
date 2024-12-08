@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 use BlackBonjour\ServiceManager\AbstractFactory\DynamicFactory;
 use BlackBonjour\ServiceManager\AbstractFactory\ReflectionFactory;
-use ncbittner\lernen\Architecture\Factory\ApplicationFactory;
-use ncbittner\lernen\Architecture\Factory\LoggerFactory;
+use NCBittner\Lernen\Architecture\Factory\ApplicationFactory;
+use NCBittner\Lernen\Architecture\Factory\LoggerFactory;
+use NCBittner\Lernen\Architecture\Factory\SessionFactory;
+use NCBittner\Lernen\Architecture\Factory\SessionManagerFactory;
+use Odan\Session\SessionInterface;
+use Odan\Session\SessionManagerInterface;
 use Psr\Log\LoggerInterface;
 use Slim\App;
 
@@ -15,8 +19,10 @@ return [
         ReflectionFactory::class,
     ],
     'factories'         => [
-        App::class             => ApplicationFactory::class,
-        LoggerInterface::class => LoggerFactory::class,
+        App::class                     => ApplicationFactory::class,
+        LoggerInterface::class         => LoggerFactory::class,
+        SessionInterface::class        => SessionFactory::class,
+        SessionManagerInterface::class => SessionManagerFactory::class,
     ],
     'invokables'        => [],
     'services'          => [],

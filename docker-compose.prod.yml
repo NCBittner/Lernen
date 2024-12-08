@@ -1,0 +1,8 @@
+services:
+  nginx:
+    restart: unless-stopped
+
+  php-fpm:
+    build:
+      target: production
+    restart: unless-stopped

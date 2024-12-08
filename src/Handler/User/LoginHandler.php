@@ -6,11 +6,10 @@ namespace NCBittner\Lernen\Handler\User;
 
 use NCBittner\Lernen\Component\User\Controller;
 use Odan\Session\SessionInterface;
-use Odan\Session\SessionManagerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final readonly class LoginFormHandler
+final readonly class LoginHandler
 {
     public function __construct(
         private Controller $controller,
@@ -24,9 +23,14 @@ final readonly class LoginFormHandler
             return $response->withHeader('Location', '/admin/');
         }
 
-        // Render login form
-        $response->getBody()->write($this->controller->loginForm());
+        $inputPassword = trim($request->getParsedBody()['password'] ?? '') ?: null;
 
-        return $response;
+        if ($inputPassword && $this->controller->login($inputPassword)) {
+            // Successful log-in - redirect to admin index page
+            return $response->withHeader('Location', '/admin/');
+        }
+
+        // Log-in failed or no password given - redirect to log-in form
+        return $response->withHeader('Location', '/admin/login');
     }
 }

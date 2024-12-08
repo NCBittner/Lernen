@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use ncbittner\lernen\Architecture\Factory\ServiceManagerFactory;
-use ncbittner\lernen\Component\User\Action\LoginFormAction;
-use ncbittner\lernen\Handler\Blog\IndexHandler;
-use ncbittner\lernen\Handler\Blog\ViewPostHandler;
+use NCBittner\Lernen\Architecture\Factory\ServiceManagerFactory;
+use NCBittner\Lernen\Handler\Admin;
+use NCBittner\Lernen\Handler\Blog;
+use NCBittner\Lernen\Handler\User;
 use Slim\App;
 
 (static function (): void {
@@ -22,9 +22,16 @@ use Slim\App;
     $app = $serviceManager->get(App::class);
 
     // Load routes and start application
-    $app->get('/', IndexHandler::class);
-    $app->get('/admin/sign-in', LoginFormAction::class);
-    $app->get('/{name}', ViewPostHandler::class);
+    $app->get('/', Blog\IndexHandler::class);
+    $app->get('/admin/', Admin\IndexHandler::class);
+    $app->get('/admin/create', Admin\CreateFormHandler::class);
+    $app->post('/admin/create', Admin\CreateHandler::class);
+    $app->get('/admin/delete/{template}', Admin\DeleteHandler::class);
+    $app->get('/admin/edit/{template}', Admin\EditFormHandler::class);
+    $app->post('/admin/edit/{template}', Admin\EditHandler::class);
+    $app->get('/admin/login', User\LoginFormHandler::class);
+    $app->post('/admin/login', User\LoginHandler::class);
+    $app->get('/{name}', Blog\ViewPostHandler::class);
 
     $app->run();
 })();

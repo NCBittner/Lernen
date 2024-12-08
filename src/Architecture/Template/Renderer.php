@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Architecture\Template;
+namespace NCBittner\Lernen\Architecture\Template;
 
 use Psr\Log\LoggerInterface;
 use Throwable;
@@ -14,8 +14,8 @@ use Twig\Environment;
  */
 readonly class Renderer
 {
-    private const string TEMPLATE_ERROR_PAGE = 'error-page.twig';
-    private const string TEMPLATE_UNKNOWN    = 'invalid-request.twig';
+    private const string TEMPLATE_ERROR_PAGE = 'system/error-page.twig';
+    private const string TEMPLATE_UNKNOWN    = 'system/invalid-request.twig';
 
     public int $statusCode;
 
@@ -27,7 +27,7 @@ readonly class Renderer
         private LoggerInterface $logger,
     ) {}
 
-    public function render(string $name): string
+    public function render(string $name, array $context = []): string
     {
         if (empty($name)) {
             $name = self::TEMPLATE_UNKNOWN;
@@ -42,7 +42,7 @@ readonly class Renderer
         }
 
         try {
-            $template   = $this->environment->render($name);
+            $template   = $this->environment->render($name, $context);
             $statusCode = 200;
         } catch (Throwable $t) {
             $statusCode = 500;

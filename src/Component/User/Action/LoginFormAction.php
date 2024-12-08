@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ncbittner\lernen\Component\User\Action;
+namespace NCBittner\Lernen\Component\User\Action;
 
-use ncbittner\lernen\Architecture\Template\Renderer;
+use NCBittner\Lernen\Architecture\Template\Renderer;
 
 readonly class LoginFormAction
 {
@@ -14,6 +14,6 @@ readonly class LoginFormAction
 
     public function execute(): string
     {
-        return $this->renderer->render('user/login');
+        return $this->renderer->render('system/login');
     }
 }
