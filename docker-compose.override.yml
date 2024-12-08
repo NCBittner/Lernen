@@ -1,0 +1,9 @@
+services:
+  php-fpm:
+    build:
+      target: development
+      args:
+        GID: ${GID:-1000}
+        UID: ${UID:-1000}
+    volumes:
+      - .:/app

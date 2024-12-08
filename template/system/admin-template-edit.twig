@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+
+{% block title %}Template-Bearbeitung - Admin{% endblock %}
+
+{% block main %}
+    <main>
+        <h1>Template-Bearbeitung</h1>
+        <h2>{{ name }}</h2>
+        <form action="/admin/edit/{{ url }}" method="post">
+            <label for="content">Inhalt</label>
+            <textarea id="content" name="content">{{ content }}</textarea>
+            <button type="submit">Speichern</button>
+        </form>
+    </main>
+{% endblock %}
