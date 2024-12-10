@@ -55,3 +55,6 @@ COPY ./template      /app/template
 
 # Run composer
 RUN composer install
+
+# Set ownership of /app to www-data (default PHP-FPM user)
+RUN chown -R www-data\: /app
