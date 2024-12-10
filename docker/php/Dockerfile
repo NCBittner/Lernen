@@ -1,5 +1,5 @@
 # --- Base image
-FROM php:8.4-fpm-bookworm AS base
+FROM php:8.3-fpm-bookworm AS base
 LABEL authors="Erick Dyck"
 
 # Keep Debian up-to-date and install required packages
