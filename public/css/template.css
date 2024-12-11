@@ -1,28 +1,18 @@
+/* Grundgerüst Design */
 body {
-  height: 100%;
-  background: #FAFAFA;
-  color: #424242;
-  font-family: 'Roboto', Arial, Verdana, Helvetica;
+  background-color: #2A7F4F;
   font-size: 16px;
-  line-height: 1.5;
+  height: 100%
 }
 
-div {
-  background-color: white;
-  padding: 8px 8px;
-  margin: 8px 8px;
-  text-decoration-color: black;
-  text-decoration-line: none;
+header {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 10px;
 }
 
-.bod {
-  height: auto;
-  width: auto;
-  text-align: -webkit-center;
-}
-
-.first-heading {
-  margin-right: 0px;
+main {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 10px;
 }
 
 h1 {
@@ -32,96 +22,32 @@ h1 {
   margin-top: 0;
 }
 
-h3 {
-  text-align: center;
+h2 {
+  font-weight
+  color: #7B3EB1;
+  text-decoration: underline;
 }
 
-table {
-  display: table;
-  border-collapse: collapse;
-  margin: 8px 8px;
-  text-align: center;
-  border-collapse: collapse;
+button {
+    background-color: #E75A0D;
 }
 
-th, td {
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  align-content: left;
-  padding: 4px 8px;
+ul ::marker {
+  color: #E75A0D;
 }
 
-.SMART {
-  text-align: left;
-}
-
-.SMART0 {
-  width: 80px;
-  height: 36px;
-}
-
-.SMART1 {
-  width: 36px;
-  height: 36px;
-}
-
-caption {
-  border: 1px solid black;
-}
-
-.header-fach {
-    text-align: center;
-}
-
-.header-thema {
-    text-align: center;
-}
-
-.header-under-thema {
-    text-align: center;
-}
-
-.a {
-  line-height: 1.25;
-  background: #ff8000;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid black;
-  padding: 4px 8px;
-  margin-right: 4px;
-}
-
-.foot {
-  padding: 4px 8px;
-  color: black;
-  text-align: center;
+ul li {
+    list-style-type: square;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #000;
   height: 3em;
 }
 
-p, ul, li {
-  font-size: 1em;
-  margin-left: 8px;
-}
-
-/* Login Pop-up*/
-.loginPopUp {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transform: scale(0);
-  transition: transform 0.3s ease-out;
-}
-
-.passwort {
-
+footer {
+  padding: 4px 8px;
+  color: black;
+  text-align: center;
 }

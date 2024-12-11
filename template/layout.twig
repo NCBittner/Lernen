@@ -4,21 +4,29 @@
         <title>{% block title %}Homepage{% endblock %}</title>
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/template.css">
+        <link rel="stylesheet" href="/css/menu-auswendig.css">
     </head>
     <body>
-        {% block main %}{% endblock %}
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a class="a button" href="/">Home</a>
-                    </li>
-                    <li>
-                        <a class="a button" href="/auswendig">Auswendig</a>
-                    </li>
-                </ul>
-            </nav>
-            <p>- Made by Nicole Cristina Bittner - nicolecbittner@gmail.com -</p>
-        </footer>
+      <header>
+        {% block header %}{% endblock %}
+      </header>
+      <main>
+        <h2>test</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/auswendig">Auswendig</a>
+                </li>
+            </ul>
+        </nav>
+      </main>
+
+      <footer>
+        <p>Made by Nicole Bittner - nicolecbittner@gmail.com</p>
+      </footer>
+
     </body>
 </html>
