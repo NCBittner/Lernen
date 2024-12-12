@@ -1,0 +1,110 @@
+{% extends "layout.twig" %}
+
+{% block title %}Stundenplan{% endblock %}
+{% block header %}Stundenplan von MG24a{% endblock %}
+
+{% block main %}
+  <table class="Stundenplan">
+
+    <tr id="stundenplan-tage">  {#Tage#}
+      <th>MONTAG</th>
+      <th>DIENSTAG</th>
+      <th>MITTWOCH</th>
+      <th>DONNERSTAG</th>
+      <th>FREITAG</th>
+    </tr>
+
+    <tr>  {#1. Stunde#}
+      <td>08:00 - 08:45</td>
+      <td>LF1 - Frau Tappendorf - Rn.308</td>
+      <td>LF3 - Frau Tappendorf - Rn.310</td>
+      <td>Eng - Frau Bogner - Rn.309</td>
+      <td>LF4 - Herr Hauck - Rn.310 </td>
+      <td>LF3 - Frau Tappendorf - Rn.309</td>
+    </tr>
+
+    <tr class="gerade">  {#2. Stunde#}
+      <td>08:45 - 09:30</td>
+      <td>Deu - Frau Hoffmann - Rn.205</td>
+      <td>LF3 - Frau Tappendorf - Rn.310</td>
+      <td>Eng - Frau Bogner - Rn.309</td>
+      <td>LF4 - Herr Hauck - Rn.310</td>
+      <td>LF3 - Frau Tappendorf - Rn.309</td>
+    </tr>
+
+    <tr>  {#3. Stunde#}
+      <td>09:50 - 10:35</td>
+      <td>LF1/2/3 - Herr Hahn - Rn.226</td>
+      <td>GK - Frau Fehlauer - Rn.108</td>
+      <td>LF1 - Frau Tappendorf - Rn.211</td>
+      <td>LF1 - Frau Tappendorf - Rn.211</td>
+      <td>Eth - Herr Tschirwa - Rn.309</td>
+    </tr>
+
+    <tr class="gerade">  {#4. Stunde#}
+      <td>10:35 - 11:20</td>
+      <td>LF1/2/3 - Herr Hahn - Rn.226</td>
+      <td>GK - Frau Fehlauer - Rn.108</td>
+      <td>LF1 - Frau Tappendorf - Rn.211</td>
+      <td>LF1 - Frau Tappendorf - Rn.211</td>
+      <td>Eth - Herr Tschirwa - Rn.309</td>
+    </tr>
+
+    <tr>  {#5. Stunde#}
+      <td>11:35 - 12:20</td>
+      <td>LF3 - Frau Tappendorf - Rn.310</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>Deu - Frau Hoffmann - Rn.205</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>LF4 - Herr Hauck - Rn.310</td>
+    </tr>
+
+    <tr class="gerade">  {#6. Stunde#}
+      <td>12:20 - 13:05</td>
+      <td>LF3 - Frau Tappendorf - Rn.310</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>Deu - Frau Hoffmann - Rn.205</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>LF4 - Herr Hauck - Rn.310</td>
+    </tr>
+
+    <tr>  {#7. Stunde#}
+      <td>13:35 14:20</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>WK - Herr Ebermann - Rn.309</td>
+      <td></td>
+      <td>Sp - Herr Heinzmann - TH</td>
+      <td></td>
+    </tr>
+
+    <tr class="gerade">  {#8. Stunde#}
+      <td>14:20 - 15:05</td>
+      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>WK - Herr Ebermann - Rn.309</td>
+      <td></td>
+      <td>Sp - Herr Heinzmann - TH</td>
+      <td></td>
+    </tr>
+
+    <tr>  {#9. Stunde#}
+      <td>15:20 - 16:05</td>
+      <td></td>
+      <td>WK - Herr Ebermann - Rn.309</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr class="gerade">  {#10. Stunde#}
+      <td>16:05 - 16:50</td>
+      <td></td>
+      <td>WK - Herr Ebermann - Rn.309</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <p>Rn: Raumnummer</p>
+
+  </table>
+{% endblock %}

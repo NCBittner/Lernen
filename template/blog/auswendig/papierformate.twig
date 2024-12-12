@@ -1,0 +1,65 @@
+{% extends "layout.twig" %}
+
+{% block title %}Papierformate{% endblock %}
+
+{% block main %}
+  <main>
+    <h2>Papierformate</h2>
+
+    <h3>Din-A Reihe<h3>
+    <table>
+      <tr>
+        <th>A7</th><td>75 x 105</td>
+      </tr>
+      <tr>
+        <th>A6</th><td>105 x 145</td>
+      </tr>
+      <tr>
+        <th>A5</th><td>148 x 210</td>
+      </tr>
+      <tr>
+        <th>A4</th><td>210 x 297</td>
+      </tr>
+      <tr>
+        <th>A3</th><td>297 x 420</td>
+      </tr>
+      <tr>
+        <th>A2</th><td>420 x 594</td>
+      </tr>
+      <tr>
+        <th>A1</th><td>594 x 841</td>
+      </tr>
+      <tr>
+        <th>A0</th><td>841 x 1189</td>
+      </tr>
+    </table>
+
+    <h3>Formel für die Druckausrichtung</h3>
+
+    <p>Druckvorlage erhät weitere 3mm/je Seite</p>
+    <p>Druckbogen erhät weitere 4mm/je Seite</p>
+
+    <table>
+      <tr>
+        <td>Druckpapier breite</td><td> : </td><td>Druck <strong>breite</strong></td><td> = </td><td>Reihe breite</td>
+      </tr>
+      <tr>
+        <td>Druckpapier höhe</td><td> : </td><td>Druck <strong>höhe</strong></td><td> = </td><td>Reihe höhe</td>
+      </tr>
+      <tr>
+        <td>Reihe breite</td><td> x </td><td>Reihe höhe</td><td> = </td><td>Anzahl der gedruckten Auflagen (Hochkant)</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Druckpapier breite</td><td> : </td><td>Druck <strong>höhe</strong></td><td> = </td><td>Reihe breite</td>
+      </tr>
+      <tr>
+        <td>Druckpapier höhe</td><td> : </td><td>Druck <strong>breite</strong></td><td> = </td><td>Reihe höhe</td>
+      </tr>
+      <tr>
+        <td>Reihe breite</td><td> x </td><td>Reihe höhe</td><td> = </td><td>Anzahl der gedruckten Auflagen (Hochkant)</td>
+      </tr>
+    </table>
+
+  </main>
+{% endblock %}

@@ -3,13 +3,110 @@
 {% block title %}Papierformate{% endblock %}
 
 {% block main %}
-  <div class="">
+  <main>
+    <h2>Papierformate</h2>
+    <p>ACHTUNG: Folgende Angaben sind alle in mm.</p>
 
+    <h3>DiN-A Reihe<h3>
     <table>
       <tr>
-        <td></td>
+        <th>A7</th><td>75 x 105</td>
+      </tr>
+      <tr>
+        <th>A6</th><td>105 x 145</td>
+      </tr>
+      <tr>
+        <th>A5</th><td>148 x 210</td>
+      </tr>
+      <tr>
+        <th>A4</th><td>210 x 297</td>
+      </tr>
+      <tr>
+        <th>A3</th><td>297 x 420</td>
+      </tr>
+      <tr>
+        <th>A2</th><td>420 x 594</td>
+      </tr>
+      <tr>
+        <th>A1</th><td>594 x 841</td>
+      </tr>
+      <tr>
+        <th>A0</th><td>841 x 1189</td>
       </tr>
     </table>
 
-  </div>
+    <h3>Flächenformat</h3>
+    <ul>
+      <li>18/1 => DiN A1 passt 18x rein</li>
+      <li> 6/1 => DiN A1 passt 6x rein</li>
+    </ul>
+    <p>Dabei ist der DiN A1 in Hochkant und der passt 6x in der Höhe und 3x in der Breite</p>
+
+    <h3>Weitere DiN Formate</h3>
+
+    <ul>
+      <li>DiN lang => 210 x 99</li>
+      <ul>
+        <li>wird verwendet für Geschäftlichen Briefverkehr verwendet.</li>
+      </ul>
+
+      <li>DiN Visitenkarte => 85 x 55</li>
+      <ul>
+        <li>ähnelt den Scheckkartenformat, perfekte größe für den Geldbeutel.</li>
+      </ul>
+
+      <li>DiN-B Formate</li>
+      <ul>
+        <li>Gruppe mit der größten Fromate</li>
+        <li>die Sogenannte "unbeschrittenen Druckformate"</li>
+        <li>geht von B0 (1000 x 1414) bis B10 (31 x 44)</li>
+      </ul>
+
+      <li>DiN-C Formate</li>
+      <ul>
+        <li>größe zwischen DiN-A und Din-B</li>
+        <li>Verwendung für Briefumschläge</li>
+        <li>geht von C0 (917 x 1297) bis C10 (28 x 40)</li>
+      </ul>
+
+      <li>DiN-D Formate</li>
+      <ul>
+        <li>werden kaum verwendet, da die ein wenig kleiner als DiN-A und größer als DiN-B sind</li>
+        <li>Verwendung: DVD Hüllen in größe DiN-5 (136 x 192)</li>
+        <li>geht von D0 (717 x 1090) bis D10 (24 x 34)</li>
+      </ul>
+    </ul>
+
+    <h2>Druckausrichtung</h2>
+    <p>Wenn keine Maße angegeben wird, dann ist es mm (Standart).</p>
+
+    <h3>Formel</h3>
+
+    <table>
+      <tr>
+        <td>Druckpapier breite</td><td> : </td><td>Druck <strong>breite</strong></td><td> = </td><td>Reihe breite</td>
+      </tr>
+      <tr>
+        <td>Druckpapier höhe</td><td> : </td><td>Druck <strong>höhe</strong></td><td> = </td><td>Reihe höhe</td>
+      </tr>
+      <tr>
+        <td>Reihe breite</td><td> x </td><td>Reihe höhe</td><td> = </td><td>Anzahl der gedruckten Auflagen (Hochkant)</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Druckpapier breite</td><td> : </td><td>Druck <strong>höhe</strong></td><td> = </td><td>Reihe breite</td>
+      </tr>
+      <tr>
+        <td>Druckpapier höhe</td><td> : </td><td>Druck <strong>breite</strong></td><td> = </td><td>Reihe höhe</td>
+      </tr>
+      <tr>
+        <td>Reihe breite</td><td> x </td><td>Reihe höhe</td><td> = </td><td>Anzahl der gedruckten Auflagen (Hochkant)</td>
+      </tr>
+    </table>
+
+    <h3>WICHTIG:</h3>
+    <p>An der Druckvorlage werden auf jeder Seite je 3mm gesetzt.</p>
+    <p>Der Druckbogen erhält ebenfalls 4mm auf jeder Seite. Da die Maschine beim Drucken einen Rand zum festhalten benötigt</p>
+
+  </main>
 {% endblock %}

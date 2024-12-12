@@ -23,9 +23,13 @@ h1 {
 }
 
 h2 {
-  font-weight
+  /*font-wight: ;*/
   color: #7B3EB1;
   text-decoration: underline;
+}
+
+h3 {
+  text-decoration: underline #7B3EB1;
 }
 
 button {
@@ -50,4 +54,16 @@ footer {
   padding: 4px 8px;
   color: black;
   text-align: center;
+}
+
+/* standart Dinge */
+tr .gerade{
+  background-color: #e2e2e2;
+}
+
+/* weitere einmalige Dinge*/
+
+/* Stundenplan Desing */
+#stundenplan-tage {
+  background-color:
 }
