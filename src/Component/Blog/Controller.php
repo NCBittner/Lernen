@@ -19,6 +19,6 @@ readonly class Controller
 
     public function viewPost(string $templateName): string
     {
-        return $this->renderer->render(sprintf('blog/%', $templateName));
+        return $this->renderer->render(sprintf('blog/%s', $templateName));
     }
 }
