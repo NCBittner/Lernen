@@ -4,27 +4,62 @@
         <title>{% block title %}Homepage{% endblock %}</title>
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/template.css">
-        <link rel="stylesheet" href="/css/menu-auswendig.css">
+        <link rel="stylesheet" href="/css/menu.css">
+      <!--  <link rel="stylesheet" href="/css/menu-auswendig.css"> -->
     </head>
     <body>
       <header>
         {% block header %}{% endblock %}
       </header>
       <main>
-        <h2>test</h2>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/auswendig">Auswendig</a>
-                </li>
-                <li></li>
-            </ul>
-        </nav>
 
-        {% block main %}{% endblock %}
+        <!-- Menuber -->
+        <div id="leftmenu">
+          <div id="menubutton" class="orang" onclick="myFunction(this)">
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+          </div>
+          <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+          </script>
+
+          <div class="menuborder">
+            <h2 class="hauptmenuheader"> <a href="/">Home</a> </h2>
+            <ul class="menulist">
+              <li class="hauptmenu"> <a href="/blog/stundenplan">Stundenplan</a> </li>
+            </ul>
+          </div>
+
+          <div class="menuborder">
+            <h2 class="hauptmenuheader">Auswendig</h2>
+            <ul class="menulist">
+              <li class="hauptmenu"> <a href="/blog/auswendig">Auswendig</a> </li>
+              <li class="hauptmenu"> <a href="/blog/auswendig/dateiformate">Dateiformate</a> </li>
+              <li class="hauptmenu"> <a href="/blog/auswendig/papierformate">Papierformate</a> </li>
+            </ul>
+          </div>
+
+          <div class="menuborder">
+            <h2 class="hauptmenuheader">LF1</h2>
+            <ul class="menulist">
+              <li class="hauptmenu"> <a href="/blog/lf1/papierformate">Papierformate</a> </li>
+              <li class="hauptmenu"> <a href="/blog/lf1/typografie">Typografie</a> </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="hauptmenuheader">WK</h2>
+            <ul class="menulist">
+              <li class="hauptmenu"> <a href="/blog/wk/berufsausbildung">Berufsausbildung</a> </li>
+            </ul>
+          </div>
+
+        </div>
+
+      {% block main %}{% endblock %}
       </main>
 
       <footer>

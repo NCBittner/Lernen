@@ -1,8 +1,43 @@
+/* FARBEN */
+.darkgreen {color: ;}
+.violet {color: ;}
+.orang {color: #D2691E;}
+.gold {color: #DaA520;}
+
+
 /* Grundgerüst Design */
+a {
+  text-decoration: none;
+  color: #000;
+  height: 3em;
+}
+
 body {
-  background-color: #2A7F4F;
+  background-color: darkgreen;
+  font-family: Verdana, sans-serif;
   font-size: 16px;
   height: 100%
+}
+
+footer {
+  padding: 4px 8px;
+  color: black;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: calc(4.2rem/2.5) 0 calc(4.2rem/2.5) 0;
+  margin-top: 0;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  text-decoration: underline;
 }
 
 header {
@@ -15,50 +50,22 @@ main {
   margin: 10px;
 }
 
-h1 {
-  font-size: 2.92rem;
-  line-height: 110%;
-  margin: calc(4.2rem/2.5) 0 calc(4.2rem/2.5) 0;
-  margin-top: 0;
-}
-
-h2 {
-  /*font-wight: ;*/
-  color: #7B3EB1;
-  text-decoration: underline;
-}
-
-h3 {
-  text-decoration: underline #7B3EB1;
-}
-
-button {
-    background-color: #E75A0D;
-}
-
 ul ::marker {
-  color: #E75A0D;
+  color: tomato;
 }
 
 ul li {
     list-style-type: square;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-  height: 3em;
-}
-
-footer {
-  padding: 4px 8px;
-  color: black;
-  text-align: center;
-}
-
 /* standart Dinge */
+tr {
+  text-align: center;
+  border: solid 1px gray;
+}
+
 tr .gerade{
-  background-color: #e2e2e2;
+  background-color: gray;
 }
 
 /* weitere einmalige Dinge*/
@@ -66,4 +73,14 @@ tr .gerade{
 /* Stundenplan Desing */
 #stundenplan-tage {
   background-color:
+}
+
+.time {
+  white-space: nowrap;
+}
+
+#fyi {
+  position: absolute;
+  color: gray;
+  padding: 5px;
 }

@@ -6,7 +6,9 @@
 {% block main %}
   <table class="Stundenplan">
 
-    <tr id="stundenplan-tage">  {#Tage#}
+    <tr id="stundenplan-tage" class="gold">  {#Tage#}
+      <td></td>
+      <td></td>
       <th>MONTAG</th>
       <th>DIENSTAG</th>
       <th>MITTWOCH</th>
@@ -14,16 +16,28 @@
       <th>FREITAG</th>
     </tr>
 
-    <tr>  {#1. Stunde#}
-      <td>08:00 - 08:45</td>
-      <td>LF1 - Frau Tappendorf - Rn.308</td>
-      <td>LF3 - Frau Tappendorf - Rn.310</td>
-      <td>Eng - Frau Bogner - Rn.309</td>
-      <td>LF4 - Herr Hauck - Rn.310 </td>
-      <td>LF3 - Frau Tappendorf - Rn.309</td>
+    {#1. Stunde#}
+    <tr>
+      <td>1.</td>
+      <td class="time">08:00 - 08:45</td>
+      <td>LF1</td>
+      <td>LF3</td>
+      <td>Eng</td>
+      <td>LF4</td>
+      <td>LF3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Frau Tappendorf - Rn.308</td>
+      <td>Frau Tappendorf - Rn.310</td>
+      <td>Frau Bogner - Rn.309</td>
+      <td>Herr Hauck - Rn.310</td>
+      <td>Frau Tappendorf - Rn.309</td>
     </tr>
 
     <tr class="gerade">  {#2. Stunde#}
+      <td>2.</td>
       <td>08:45 - 09:30</td>
       <td>Deu - Frau Hoffmann - Rn.205</td>
       <td>LF3 - Frau Tappendorf - Rn.310</td>
@@ -33,6 +47,7 @@
     </tr>
 
     <tr>  {#3. Stunde#}
+      <td>3.</td>
       <td>09:50 - 10:35</td>
       <td>LF1/2/3 - Herr Hahn - Rn.226</td>
       <td>GK - Frau Fehlauer - Rn.108</td>
@@ -42,6 +57,7 @@
     </tr>
 
     <tr class="gerade">  {#4. Stunde#}
+      <td>4.</td>
       <td>10:35 - 11:20</td>
       <td>LF1/2/3 - Herr Hahn - Rn.226</td>
       <td>GK - Frau Fehlauer - Rn.108</td>
@@ -51,6 +67,7 @@
     </tr>
 
     <tr>  {#5. Stunde#}
+      <td>5.</td>
       <td>11:35 - 12:20</td>
       <td>LF3 - Frau Tappendorf - Rn.310</td>
       <td>LF2 - Herr Weidel - Rn.210</td>
@@ -60,6 +77,7 @@
     </tr>
 
     <tr class="gerade">  {#6. Stunde#}
+      <td>6.</td>
       <td>12:20 - 13:05</td>
       <td>LF3 - Frau Tappendorf - Rn.310</td>
       <td>LF2 - Herr Weidel - Rn.210</td>
@@ -69,8 +87,9 @@
     </tr>
 
     <tr>  {#7. Stunde#}
-      <td>13:35 14:20</td>
-      <td>LF2 - Herr Weidel - Rn.210</td>
+      <td>7.</td>
+      <td>13:35 - 14:20</td>
+      <td>LF2<br>Herr Weidel - Rn.210</td>
       <td>WK - Herr Ebermann - Rn.309</td>
       <td></td>
       <td>Sp - Herr Heinzmann - TH</td>
@@ -78,6 +97,7 @@
     </tr>
 
     <tr class="gerade">  {#8. Stunde#}
+      <td>8.</td>
       <td>14:20 - 15:05</td>
       <td>LF2 - Herr Weidel - Rn.210</td>
       <td>WK - Herr Ebermann - Rn.309</td>
@@ -87,6 +107,7 @@
     </tr>
 
     <tr>  {#9. Stunde#}
+      <td>9.</td>
       <td>15:20 - 16:05</td>
       <td></td>
       <td>WK - Herr Ebermann - Rn.309</td>
@@ -96,6 +117,7 @@
     </tr>
 
     <tr class="gerade">  {#10. Stunde#}
+      <td>10.</td>
       <td>16:05 - 16:50</td>
       <td></td>
       <td>WK - Herr Ebermann - Rn.309</td>
@@ -104,7 +126,7 @@
       <td></td>
     </tr>
 
-    <p>Rn: Raumnummer</p>
+    <p id="fyi">Rn: Raumnummer</p>
 
   </table>
 {% endblock %}
