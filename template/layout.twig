@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de-DE">
     <head>
-        <title>{% block title %}Homepage{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/template.css">
         <link rel="stylesheet" href="/css/menu.css">
+        <script language="javascript" src="/menu.js" type="text/javascript"></script>
       <!--  <link rel="stylesheet" href="/css/menu-auswendig.css"> -->
     </head>
     <body>
@@ -14,47 +15,34 @@
       <main>
 
         <!-- Menuber -->
-        <div id="leftmenu">
-          <div id="menubutton" class="orang" onclick="myFunction(this)">
-            <div id="bar1"></div>
-            <div id="bar2"></div>
-            <div id="bar3"></div>
-          </div>
-          <script>
-            function myFunction(x) {
-              x.classList.toggle("change");
-            }
-          </script>
-
-          <div class="menuborder">
-            <h2 class="hauptmenuheader"> <a href="/">Home</a> </h2>
-            <ul class="menulist">
-              <li class="hauptmenu"> <a href="/blog/stundenplan">Stundenplan</a> </li>
-            </ul>
-          </div>
-
-          <div class="menuborder">
-            <h2 class="hauptmenuheader">Auswendig</h2>
-            <ul class="menulist">
-              <li class="hauptmenu"> <a href="/blog/auswendig">Auswendig</a> </li>
-              <li class="hauptmenu"> <a href="/blog/auswendig/dateiformate">Dateiformate</a> </li>
-              <li class="hauptmenu"> <a href="/blog/auswendig/papierformate">Papierformate</a> </li>
-            </ul>
-          </div>
-
-          <div class="menuborder">
-            <h2 class="hauptmenuheader">LF1</h2>
-            <ul class="menulist">
-              <li class="hauptmenu"> <a href="/blog/lf1/papierformate">Papierformate</a> </li>
-              <li class="hauptmenu"> <a href="/blog/lf1/typografie">Typografie</a> </li>
-            </ul>
-          </div>
+        <div id="mySidebar" class="sidebar">
 
           <div>
-            <h2 class="hauptmenuheader">WK</h2>
-            <ul class="menulist">
-              <li class="hauptmenu"> <a href="/blog/wk/berufsausbildung">Berufsausbildung</a> </li>
-            </ul>
+            <div class="container">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
+
+          <h2 class="hauptmenuheader"> <a href="/">Home</a> </h2>
+          <p> <a href="/stundenplan">Stundenplan</a> </p>
+
+          <button class="accordion">Auswendig</button>
+          <div class="panel">
+            <p> <a href="/auswendig/dateiformate">Dateiformate</a> </p>
+            <p> <a href="/auswendig/papierformate">Papierformate</a> </p>
+          </div>
+
+          <button class="accordion">LF1</button>
+          <div class="panel">
+            <p> <a href="/lf1/papierformate">Papierformate</a> </p>
+            <p> <a href="/lf1/typografie">Typografie</a> </p>
+          </div>
+
+          <button class="accordion">WK</button>
+          <div class="panel">
+            <p> <a href="/wk/berufsausbildung">Berufsausbildung</a> </p>
           </div>
 
         </div>
