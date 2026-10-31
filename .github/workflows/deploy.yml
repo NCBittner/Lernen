@@ -37,7 +37,7 @@ jobs:
       - name: Update Symlink, Restart Docker and Cleanup
         run: |
           ssh github-agent@${{ secrets.SERVER_IP }} "
-            echo 'COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml' > ${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }}/.env &&
+            ln -sfn ${{ env.TARGET_BASE_DIR }}/shared/.env ${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }}/.env
             ln -sfn ${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }} ${{ env.TARGET_BASE_DIR }}/latest &&
             cd ${{ env.TARGET_BASE_DIR }}/latest &&
             docker compose up --build -d --remove-orphans &&
