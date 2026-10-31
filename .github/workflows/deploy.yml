@@ -1,0 +1,43 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  TARGET_BASE_DIR: /home/github-agent/projects/nicolebittner-de/lernen
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add Server to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Set Release Timestamp
+        id: vars
+        run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
+      - name: Rsync Files
+        run: |
+          ssh github-agent@${{ secrets.SERVER_IP }} "mkdir -p ${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }}"
+          rsync -avz --exclude='.git/' --exclude='.github/' ./ github-agent@${{ secrets.SERVER_IP }}:${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }}/
+
+      - name: Update Symlink and Cleanup
+        run: |
+          ssh github-agent@${{ secrets.SERVER_IP }} "
+            ln -sfn ${{ env.TARGET_BASE_DIR }}/releases/${{ env.TIMESTAMP }} ${{ env.TARGET_BASE_DIR }}/latest &&
+            cd ${{ env.TARGET_BASE_DIR }}/releases &&
+            ls -1dt * | tail -n +6 | xargs -d '\n' rm -rf
+          "
