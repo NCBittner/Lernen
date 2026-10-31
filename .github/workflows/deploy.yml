@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   TARGET_BASE_DIR: /home/github-agent/projects/nicolebittner-de/lernen
