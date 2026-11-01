@@ -10,6 +10,12 @@ services:
       - ./public:/app/public:ro
     depends_on:
       - php-fpm
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fL http://localhost:80 || exit 1"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
 
   php-fpm:
     build:
